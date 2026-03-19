@@ -10,13 +10,11 @@
     <div class="container">
         <h1>To decode what you received</h1>
         <h5>Open on a laptop for better readability</h5>
-        <h3>Enter the text and your dob below</h3>
+        <h3>Enter the text and your date of birth below</h3>
         <div>
-            <label for="text-input">Enter text:</label>
-            <input type="text" id="textInput" name="textInput" placeholder="Type encoded text...">
+            <textarea id="textInput" name="textInput" placeholder="Paste encoded text..."></textarea>
         </div>
         <div>
-            <label for="dob">Enter DOB:</label>
             <input type="date" name="dob" id="dob">
         </div>
         <button class="submit">Get</button>
@@ -45,7 +43,7 @@
     
         }
 
-        document.querySelector('.decodedTextBox').innerHTML = decode(inputText, dob, "423272");
+        document.querySelector('.decodedTextBox').textContent = decode(inputText, dob, "423272");
 
     });
 </script>
